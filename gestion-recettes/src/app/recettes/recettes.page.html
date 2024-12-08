@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mes Recettes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Champ de recherche -->
+  <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="searchRecettes()" debounce="500"
+    placeholder="Rechercher une recette"></ion-searchbar>
+
+  <ion-list>
+    <!-- Affichage de chaque recette -->
+    <ion-item *ngFor="let recette of filteredRecettes">
+      <ion-label>
+        <h2>{{ recette.nom }}</h2>
+        <p>{{ recette.ingredients }} - {{ recette.etapes | slice:0:50 }}...</p>
+      </ion-label>
+      <!-- Bouton pour modifier la recette -->
+      <ion-button fill="outline" (click)="editRecette(recette)">Modifier</ion-button>
+      <!-- Bouton pour supprimer la recette -->
+      <ion-button color="danger" (click)="deleteRecette(recette.id)">Supprimer</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Bouton flottant pour ajouter une nouvelle recette -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addRecette()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

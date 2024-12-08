@@ -1,0 +1,83 @@
+/* En-tête */
+ion-header {
+    --background: linear-gradient(135deg, #ff9a76, #ff6f61);
+    /* Dégradé chaleureux */
+    --color: white;
+    font-family: 'Lora', serif;
+}
+
+ion-toolbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ion-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+ion-button {
+    --color: white;
+    --background: transparent;
+    --border-radius: 8px;
+    --color-focused: #ffe3dc;
+    /* Couleur lors du focus */
+}
+
+/* Contenu principal */
+ion-content {
+    background-color: #fffaf0;
+    /* Fond doux rappelant le papier */
+}
+
+ion-item {
+    --background: #ffffff;
+    /* Fond blanc des champs */
+    border-radius: 8px;
+    margin: 12px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 12px;
+}
+
+ion-input,
+ion-textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #4a403a;
+    /* Texte brun doux */
+}
+
+ion-input::placeholder,
+ion-textarea::placeholder {
+    color: #8b7765;
+    /* Texte placeholder marron clair */
+    font-style: italic;
+}
+
+/* Bouton Sauvegarder */
+ion-button[expand="block"] {
+    --background: #ff6f61;
+    /* Rouge doux */
+    --color: white;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    --border-radius: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 16px auto;
+}
+
+ion-button[expand="block"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    ion-title {
+        font-size: 1.4rem;
+    }
+
+    ion-button[expand="block"] {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,29 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // Remplit toute la hauteur de l'écran
+  text-align: center;
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f); // Dégradé léger
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333; // Couleur du texte
+  }
+
+  ion-button {
+    --background: #ff7f50; // Couleur de fond personnalisée
+    --background-hover: #ff4500; // Couleur au survol
+    --color: #fff; // Couleur du texte
+    --border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); // Animation au survol
+    }
+  }
+}

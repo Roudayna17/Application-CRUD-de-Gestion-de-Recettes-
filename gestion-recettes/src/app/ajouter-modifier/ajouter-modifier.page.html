@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isEditMode ? 'Modifier' : 'Ajouter' }} une recette</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToRecettes()">Annuler</ion-button> <!-- Redirection vers la liste des recettes -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input placeholder="Nom de la recette" [(ngModel)]="recette.nom" name="nom" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Ingrédients" [(ngModel)]="recette.ingredients" name="ingredients"
+      required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Étapes de préparation" [(ngModel)]="recette.etapes" name="etapes"
+      required></ion-textarea>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="save()">Sauvegarder</ion-button>
+  </div>
+</ion-content>
